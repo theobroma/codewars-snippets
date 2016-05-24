@@ -7,6 +7,22 @@
 //----Алфавит----
 
 "abcdefghijklmnopqrstuvwxyz"
+//----Генерация алфавита----
+var chars=[];
+for (var i=97;i<123;i++){
+  chars.push(String.fromCharCode(i));
+}
+console.log(chars.join(""))
+//output:
+abcdefghijklmnopqrstuvwxyz
+
+
+//----CharCodes больших и маленьких букв----
+A-Z   charCodes: 65-90;
+a-z   charCodes: 97-122;
+
+
+
 //----Replace----
 str.replace(/(?=.{5})./g, '#') //Замена в строке всех символов кроме последних 4 на #
 str.replace(/\./gi, "-");

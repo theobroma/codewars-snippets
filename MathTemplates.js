@@ -34,5 +34,11 @@ function factorial(n) {
   while(a&&b)a>=b?a%=b:b%=a;
   return a||b
 } 
-
+//----Подсчет к-ства лет до нужной сумы с процентом и налогом----
+function calculateYears(principal, interest, tax, desired) {
+  return Math.ceil(
+    Math.log(desired / principal) / 
+    Math.log(1 + interest * (1 - tax))
+  );
+}
 
